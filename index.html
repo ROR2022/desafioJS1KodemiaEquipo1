@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Ejercicio Mentores</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="text-center">
     <h1>Main Page</h1>
@@ -13,8 +14,58 @@
     <p>tambien debe poder consultar los datos en la base de datos</p>
     
     <p>propongo que los datos se puedan mostrar como tarjetas y podria ser en una pagina distinta</p>
-    <a class="btn btn-secondary" href="./pages/editMentor.html">editMentorPage</a>
-    <a class="btn btn-secondary" href="./pages/showAlldata.html">mostrar Datos</a>
+    <form class="container col-12 col-lg-6 px-5 bg-secondary bg-opacity-50 p-3 rounded text-start mb-3" id="myForm">
+      <div class="mb-3">
+        <label for="inputName" class="form-label">Nombre:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="nombre"
+          name="nombre"
+          id="inputFirstName"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="inputLastName" class="form-label">Apellido:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="apellido"
+          name="apellido"
+          id="inputLastName"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="inputMateria" class="form-label">Materia:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="materia"
+          name="materia"
+          id="inputMateria"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="inputPromedio" class="form-check-label">Promedio:</label>
+          <input
+            type="number"
+            id="inputPromedio"
+            name="promedio"
+            class="form-check-input"
+            style="width: 25px; height: 25px;"
+          />
+      </div>
+
+      
+      <div class="w-100 text-center">
+      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+    </div>
+      <div class="text-danger fs-3 text-center m-3" id="error"></div>
+    </form>
+
+
+    <a class="btn btn-secondary d-none" href="./pages/editMentor.html">editMentorPage</a>
+    <a class="btn btn-secondary" href="./pages/showAlldata.html">mostrar Mentores</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="./lib/index.js" type="module"></script>
   </body>
